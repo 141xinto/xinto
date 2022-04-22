@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        .content {
+            margin: 20px auto;
+            width: 450px;
+            height: 350px;
+            border: 1px solid #000;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            display: flex;
+        }
+
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .active {
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <span class="active">第一课</span>
+            <span>第二课</span>
+            <span>第三课</span>
+        </header>
+    </div>
+</body>
+<script>
+    // function addClass(element, value) {
+    //     if (!element.className) {
+    //         element.className = value;
+    //     } else {
+    //         newClassName = element.className;
+    //         newClassName += " ";
+    //         newClassName += value;
+    //         element.className = newClassName;
+    //     }
+    // }
+    function removeClass(element, value) {
+        element.className = value;
+    }
+    let spa = document.querySelectorAll('span')
+    for (let i = 0; i < spa.length; i++) {
+        spa[i].onmouseover = function () {
+            for (let j = 0; j < spa.length; j++) {
+                spa[i].className = ''
+                console.log(spa[j]);
+                // spa[j].setAttribute('className','active')
+
+            }
+            this.className = 'active'
+        }
+        // spa[i].onmouseout = function () {
+
+        // }
+    }
+</script>
+
+</html>

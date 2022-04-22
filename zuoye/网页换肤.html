@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .title {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .title input {
+            width: 25px;
+            height: 25px;
+            border: none;
+        }
+
+        input:nth-of-type(1) {
+            background: red;
+            border: 10px red solid;
+        }
+
+        input:nth-of-type(2) {
+            background: yellow;
+            border: 10px yellow solid;
+        }
+
+        input:nth-of-type(3) {
+            background: blue;
+            border: 10px blue solid;
+        }
+
+        .active {
+            background: #fff !important;
+        }
+    </style>
+</head>
+
+<body id="bd">
+    <div class="title">
+        <input type="button" value="" title="红色">
+        <input type="button" value="" title="黄色">
+        <input type="button" value="" title="蓝色">
+    </div>
+    <script>
+        let allinp = document.querySelectorAll('input')
+        let bd = document.getElementById('bd')
+        let colorData = ['red', 'yellow', 'blue']
+        function getColor(ele, color) {
+            ele.style.background = color
+        }
+        for (let i = 0; i < allinp.length; i++) {
+            allinp[i].onclick = function () {
+                for (let j = 0; j < allinp.length; j++) {
+                    allinp[j].className = ''
+                }
+                this.index = i
+                console.log(this.index);
+                if (this.index == i) {
+                    this.className = 'active'
+                    getColor(bd, colorData[i])
+                }
+                // if (i == 0) {
+
+                //     this.className = 'active'
+                //     bd.style.background = 'red'
+                // } else if (i == 1) {
+
+                //     this.className = 'active'
+                //     bd.style.background = 'yellow'
+                // } else {
+
+                //     this.className = 'active'
+                //     bd.style.background = 'blue'
+                // }
+
+                // this.style.border = '10px red solid'
+            }
+        }
+
+
+
+        // allinp[0].onclick = function() {
+        //     allinp[0].style.border =  '10px red solid'
+        //     allinp[0].style.background = '#fff'
+        //     bd.style.background = 'red'
+        // }
+        // allinp[1].onclick = function() {
+        //     allinp[1].style.border =  '10px yellow solid'
+        //     allinp[1].style.background = '#fff'
+        //     bd.style.background = 'yellow'
+        // }
+        // allinp[2].onclick = function() {
+        //     allinp[2].style.border =  '10px blue solid'
+        //     allinp[2].style.background = '#fff'
+        //     bd.style.background = 'blue'
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+        }
+
+        #dom {
+            width: 200px;
+            height: 200px;
+            background: #000;
+            margin: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #dom p {
+            color: #fff;
+            font-size: 14px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <p><span>属性名：</span><input type="text" id="sx" value="background"></p>
+            <p><span>属性值：</span><input type="text" id="sxz" value="red"></p>
+            <p><button id="oks">确定</button><button id="resets">重置</button></p>
+        </header>
+        <div id="dom">
+            <p>在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</p>
+        </div>
+    </div>
+</body>
+<script>
+
+    let keys = document.getElementById('sx')
+    let vals = document.getElementById('sxz')
+    let oks = document.getElementById('oks')
+    let resets = document.getElementById('resets')
+    let dom = document.getElementById('dom')
+    function getKeys(doms, tet, valss) {
+        doms.style[tet] = valss
+    }
+    oks.onclick = function () {
+        
+        let aa = keys.value
+        let bb = vals.value
+        console.log(dom, aa, bb);
+        getKeys(dom, aa, bb)
+        // dom.style.width = '300px'
+    }
+    resets.onclick = function(){
+        dom.removeAttribute("style")
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ask{
+            width: 200px;
+            font-size: 14px;
+            background: orange;
+            color: #000;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+            margin: 10px auto;
+            border: 1px red solid;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" style="text-align: center;">
+        <span id="ap"><input type="checkbox">两周内自动登录</span>
+        <div id="ask">为了您的安全tgv信息，请不要在网吧或公用电脑上使用此功能</div>
+    </div>
+    <script>
+        let spa = document.getElementById('ap')
+        let as = document.getElementById('ask')
+        spa.onmouseover = function(){
+            as.style.display = 'block'
+        }
+        spa.onmouseout = function(){
+            as.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
