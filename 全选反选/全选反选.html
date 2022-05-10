@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        text-align: center;
+        margin: auto;
+        width: 150px;
+        border: 1px solid black;
+    }
+
+    .box div {
+        padding: 8px 0;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var All = document.getElementById("cheAll")
+        var all = document.querySelectorAll('.cll')
+        var ALL = document.getElementById("ALL")
+        All.onclick = function () {
+            console.log(this.checked);
+            for (var i = 0; i < all.length; i++) {
+                all[i].checked = this.checked
+            }
+        };
+        for (var i = 0; i < all.length; i++) {
+            all[i].onclick = function () {
+                console.log(this.checked);
+                var ll = true
+                for (var j = 0; j < all.length; j++) {
+                    if (all[j].checked == false) {
+                        ll = false
+                    }
+                    All.checked = ll
+
+                }
+            }
+        }
+        ALL.onclick = function () {
+            for (var i = 0; i < all.length; i++) {
+                all[i].checked = !all[i].checked
+                var ll = true
+                for (var j = 0; j < all.length; j++) {
+                    if (all[j].checked == false) {
+                        ll = false
+                    }
+                    All.checked = ll
+                }
+            }
+        }
+    }
+</script>
+
+<body>
+    <div class="box">
+        <div><input type="checkbox" id="cheAll"><span>全选</span> &nbsp;<span id="ALL">反选</span></div>
+        <div><input type="checkbox" class="cll">选项（零）</div>
+        <div><input type="checkbox" class="cll">选项（一）</div>
+        <div><input type="checkbox" class="cll">选项（二）</div>
+        <div><input type="checkbox" class="cll">选项（三）</div>
+        <div><input type="checkbox" class="cll">选项（四）</div>
+        <div><input type="checkbox" class="cll">选项（五）</div>
+        <div><input type="checkbox" class="cll">选项（六）</div>
+        <div><input type="checkbox" class="cll">选项（七）</div>
+        <div><input type="checkbox" class="cll">选项（八）</div>
+        <div><input type="checkbox" class="cll">选项（十）</div>
+
+    </div>
+    <h2>5555</h2>
+</body>
+
+</html>
