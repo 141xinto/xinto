@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 0 10px;
+    }
+    div p{
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        margin-top: 5px;
+        margin-left: 5px;
+        display: none;
+        
+    }
+    .div1{
+        background: pink;
+    }
+    .div2{
+        background: green;
+    }
+    .div3{
+        background: darkcyan;
+    }
+    h1{
+        overflow: hidden;
+        width: 500px;
+        height: 50px;
+        background: #000;
+    }
+</style>
+<body>
+   
+    <div class="div1"><p></p></div>
+    <div class="div2"><p></p></div>
+    <div class="div3"><p></p></div>
+     <h1></h1>
+</body>
+</html>
+<script>
+    var div=document.querySelectorAll('div')
+    var p=document.querySelectorAll('p')
+    var h1=document.querySelector('h1')
+    var body=document.body
+    div[0].onclick=function(){
+      p[0].style.display='block'
+      body.style.background='blue'
+      h1.style.background='red'
+    }
+    div[1].onclick=function(){
+      p[1].style.display='block'
+      p[0].style.display='none'
+      body.style.background='yellow'
+      h1.style.background='blue'
+    }
+    div[2].onclick=function(){
+      p[2].style.display='block'
+      p[1].style.display='none'
+     body.style.background='blue'
+     h1.style.background='yellow'
+    }
+</script>

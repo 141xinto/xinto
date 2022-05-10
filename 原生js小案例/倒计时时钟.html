@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        overflow: hidden;
+        width: 350px;
+        height: 180px;
+        background: #000;
+        margin: 0 auto;
+        text-align: center;
+        ;
+    }
+
+    span {
+        color: #fff;
+    }
+
+    p {
+        margin-top: 30px;
+    }
+
+    .start {
+        width: 300px;
+        height: 60px;
+        background-color: green;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <p>
+            <button class="btn1">01</button><span>&ensp;分钟&ensp;</span><button
+                class="btn2">5</button><span>&ensp;秒</span>
+        </p>
+        <button class="start">启动</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var btn1 = document.querySelector('.btn1')
+    var btn2 = document.querySelector('.btn2')
+    var kg = document.querySelector('.start')
+    var flag = 1
+    var time
+    kg.onclick = function () {
+        console.log(time);
+        if (flag == 1) {
+            time = setInterval(() => {
+                btn2.innerHTML--
+                if (btn2.innerHTML == 0) {
+                    btn2.innerHTML = 60
+                    btn1.innerHTML = 0
+                } else if (btn1.innerHTML == 0 && btn2.innerHTML == 0) {
+                    btn2.innerHTML = 60
+                    btn2.innerHTML--
+                    btn2.innerHTML = 0
+                    clearInterval(time)
+                }
+            }, 1000);
+            kg.innerHTML = '取消'
+            kg.style.background = 'red'
+            flag = 0
+        } else {
+
+            clearInterval(time)
+            kg.innerHTML = '启动'
+            kg.style.background = ''
+            flag = 1
+        }
+    }
+</script>

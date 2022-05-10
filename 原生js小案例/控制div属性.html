@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background: #000;
+        margin-top: 30px;
+    }
+</style>
+<body>
+    <button>变宽</button>
+    <button>变高</button>
+    <button>变色</button>
+    <button>隐藏</button>
+    <button>重置</button>
+    <div class="box"></div>
+</body>
+</html>
+
+<script>
+    var box=document.querySelector('.box')
+    var btn=document.querySelectorAll('button')
+    btn[0].onclick=function(){
+        box.style.width='200'+'px'
+    }
+    btn[1].onclick=function(){
+        box.style.height='200'+'px'
+    }
+    btn[2].onclick=function(){
+        box.style.background='red'
+    }
+    btn[3].onclick=function(){
+        box.style.display='none'
+    }
+    btn[4].onclick=function(){
+        box.style.width='100'+'px'
+        box.style.height='100'+'px'
+        box.style.background='#000'
+        box.style.display='block'
+    }
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // var a='start'
+    // console.log(a);
+    // function fn(flag){
+    //     return new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         if(flag){
+    //              resolve('ing')
+    //         }else{
+    //             reject('inggggg')
+    //         }
+
+
+    // },2000)
+    // })
+    // }
+    // fn(false).then(res=>{
+    //     console.log(res); 
+    //     var b='end' 
+    //     console.log(b);
+    // }).catch(erro=>{
+    //     console.log(erro);
+    // })
+
+    // console.log(fn());
+   function fn() {
+        var xhr = new XMLHttpRequest()
+        xhr.open('get', 'data.txt', true)
+        xhr.send()
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                     return console.log(xhr.responseText);
+                } else {
+                    xhr.status
+                }
+            }
+        }
+    }
+   
+    console.log(1);
+</script>

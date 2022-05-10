@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 60%;
+            height: 40px;
+            background: #000;
+            margin: 0 auto;
+        }
+
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            line-height: 40px;
+
+        }
+
+        li {
+            margin: 0 30px;
+            ;
+        }
+
+        .box1 {
+            /* background-color: #f00; */
+        }
+
+        p {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>站长之家</li>
+            <li>行业资讯</li>
+            <li>站长在线</li>
+            <li>网站运营</li>
+            <li>设计在线</li>
+            <li>网络编程</li>
+            <li>联盟资讯</li>
+            <li>服务器</li>
+        </ul>
+        <div class="box1">
+            <p>1111111</p>
+            <p>22222222222</p>
+            <p>33333333333</p>
+            <p>444444444</p>
+            <p>55555555555</p>
+            <p>6666666666</p>
+            <p>777777777</p>
+            <p>8888888888888</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var lis = document.querySelectorAll('li')
+    var p = document.querySelectorAll('p')
+    // console.log(lis);
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.style.fontWeight = 'bold'
+            for (var j = 0; j < p.length; j++) {
+                p[j].style.display = 'block'
+            }
+        }
+        lis[i].onmouseout = function () {
+            this.style.fontWeight = ''
+            for (var j = 0; j < p.length; j++) {
+                p[j].style.display = 'none'
+            }
+
+        }
+    }
+</script>
