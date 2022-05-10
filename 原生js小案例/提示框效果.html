@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    #outer {
+        width: 560px;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 0 0 10px 10px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        width: 19%;
+        margin-top: 10px;
+        border: 1px solid #000;
+        justify-content: space-between;
+        text-align: center;
+        position: relative;
+    }
+
+    img {
+        display: none;
+        border: 1px solid #000;
+        position: absolute;
+        top: -20px;
+    }
+
+    a {
+        display: block;
+        color: black;
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        background: #f0f0f0;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div id="outer">
+        <h2>车标展示</h2>
+        <ul>
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+            <li><a href="#" title="lambojini 兰博基尼"><strong>lambojini</strong>兰博基尼</a>
+                <img src="1.jpg" alt="兰博"></li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var lis = document.querySelectorAll('li')
+    var img = document.querySelectorAll('img')
+    // console.log(img);
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].index = img[i].index = i;
+        lis[i].onmouseover = function () {
+            img[this.index].style.display = 'block'
+            // lis[this.index].style.display = 'none'
+        }
+        lis[i].onmouseout = function () {
+            img[this.index].style.display = 'none'
+            // lis[this.index].style.display = 'none'
+        }
+    }
+</script>

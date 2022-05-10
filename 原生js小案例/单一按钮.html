@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    ul{
+        width: 200px;
+        background-color: #ccc;
+        margin: 0px auto;
+       /* padding-left: 20px; */
+     
+    }
+    p{
+        width: 200px;
+          background-color: #f00;
+          margin: 0 auto;
+    }
+    li{
+        line-height: 30px;
+        /* display: none; */
+    }
+    .uu{
+        display: none;
+    }
+</style>
+<body>
+    <p>播放列表...</p>
+    <ul class="uu">
+        <li>11111111111111</li>
+        <li>22222222222222</li>
+        <li>33333333333333</li>
+        <li>44444444444444</li>
+        <li>55555555555555</li>
+        <li>66666666666666</li>
+    </ul>
+</body>
+</html>
+<script>
+var pp=document.querySelector('p')
+var lis=document.querySelectorAll('li')
+var ul=document.querySelector('ul')
+var flag=1
+for(var i=0;i<lis.length;i++){
+    lis[i].onmouseover=function(){
+        this.style.background='blue'
+    }
+    lis[i].onmouseout=function(){
+        this.style.background=''
+    }
+    
+}
+pp.onclick=function(){
+       ul.className= ul.className=='uu'?'':'uu'
+       console.log(ul.className);
+    }
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+       *{
+           padding: 0;
+           margin: 0;
+           list-style: none;
+           box-sizing: border-box;
+       }
+       .box{
+           margin: 0 auto;
+       }
+       ul{
+           width: 40%;
+           height: 40px;
+           line-height: 40px;
+           background-color: #000;
+           color: #fff;
+           display: flex;
+           margin: 0 auto;
+       }
+       li{
+           width: 120px;
+           text-align: center;
+       }
+   </style>
+<body>
+   <div class="box">
+    <ul>
+        <li class="lis">第一课</li>
+        <li class="lis">第二课</li>
+        <li class="lis">第三课</li>
+    </ul> 
+    <h1 class="show" style="display: none;">璩</h1>
+    <h2 style="display: none;">璩浩</h2>
+    <h3 style="display: none;">璩浩林</h3>
+   </div>
+</body>
+</html>
+<script>
+    var lis=document.querySelectorAll('.lis')
+    var h1=document.querySelector('h1')
+    var h2=document.querySelector('h2')
+    var h3=document.querySelector('h3')
+    for(var i=0;i<lis.length;i++){
+        lis[i].index=i
+        lis[i].onmouseover=function(){
+            this.style.background='#cccccc'
+            this.style.color='#000'
+           if(this.index == 0){
+            h1.style.display='block'
+           } else if(this.index == 1){
+            h2.style.display='block'
+           }else{
+            h3.style.display='block'
+           }
+        }
+        lis[i].onmouseout=function(){
+            this.style=''
+            if(this.index == 0){
+            h1.style.display='none'
+           } else if(this.index == 1){
+            h2.style.display='none'
+           }else{
+            h3.style.display='none'
+           }
+        }
+    }
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span {
+        text-align: center;
+        line-height: 200px;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin: 8px;
+        border: 1px solid red;
+        background-color: pink;
+    }
+
+    .box {
+        width: 800px;
+        margin: auto;
+    }
+
+    .top {
+        text-align: center;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var PAN = document.querySelectorAll("span")
+        var IMG = document.querySelectorAll("img")
+        var P = document.querySelectorAll("p")
+        for (let i = 0; i < PAN.length; i++) {
+            PAN[i].onmouseover = function () {
+                IMG[i].style.display = 'block'
+                P[i].style.display = "none"
+            }
+        }
+        for (let i = 0; i < PAN.length; i++) {
+            PAN[i].onmouseout = function () {
+                IMG[i].style.display = 'none'
+                P[i].style.display = "block"
+            }
+        }
+
+    }
+</script>
+
+<body>
+    <div class="box">
+        <div class="top">名车车标展示 鼠标划过显示车标</div>
+        <span>
+            <p> 兰博基尼</p>
+            <img src="./1.jpg" alt="" style="display: none;">
+        </span>
+        <span>
+            <p> 法拉利</p>
+            <img src="./1.jpg" alt="" style="display: none;">
+        </span>
+        <span>
+            <p> 保时捷</p>
+            <img src="./1.jpg" alt="" style="display: none;">
+        </span>
+        <span>
+            <p> 宾利</p>
+            <img src="./1.jpg" alt="" style="display: none;">
+        </span>
+        <span>
+            <p>帕塞梅拉</p>
+            <img src="./1.jpg" alt="" style="display: none;">
+        </span>
+        <span>
+            <p>粪叉子</p>
+            <img src="./1.jpg" alt="" style="display: none;">
+        </span>
+    </div>
+</body>
+
+</html>
