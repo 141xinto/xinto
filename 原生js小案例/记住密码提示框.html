@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 600px;
+        height: 400px;
+        /* background-color: darkcyan; */
+        margin: 0 auto;
+        text-align: center;
+    }
+    .box span{
+        font-size: 12px;
+    }
+    .box .p2{
+        padding: 3px 3px;
+        width: 160px;
+        height: 40px;
+        font-size: 12px;
+        background: #ffefa4;
+        border: 1px solid red;
+        margin: 10px auto;
+        display: none;
+    }
+</style>
+<body>
+    <div class="box">
+        <p class="p1"><input type="checkbox">
+            <span>两周内自动登录</span></p>
+        <p class="p2">为了您的信息安全，请不要在网吧或电脑上使用此功能！</p>
+    </div>
+</body>
+</html>
+<script>
+    var p1=document.querySelector('.p1')
+    var p2=document.querySelector('.p2')
+    p1.onmousemove=function(){
+       p2.style.display='block'
+    }
+    p2.onmouseover=function(){
+       p2.style.display='none'
+        
+    }
+</script>

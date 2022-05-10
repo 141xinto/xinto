@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div>
+        <input type="text" class="i1"> <span>+</span><input type="text" class="i2">=<span
+            class="sp">0</span><button>求和</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var btn = document.querySelector('button')
+    var i1 = document.querySelector('.i1')
+    var i2 = document.querySelector('.i2')
+    var sp = document.querySelector('.sp')
+    btn.onclick = function () {
+        // var sum = 0
+        var a = parseInt(i1.value) + parseInt(i2.value)
+        // sum += a
+        sp.innerHTML = a
+    }
+</script>

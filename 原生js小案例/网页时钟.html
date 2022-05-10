@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 300px;
+        margin: 10px auto;
+        padding: 40px;
+        background: black;
+        text-align: center;
+    }
+
+    span {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <button>10</button><span>&ensp;时</span>
+        <button>20</button><span>&ensp;分</span>
+        <button>20</button><span>&ensp;秒</span>
+    </div>
+</body>
+
+</html>
+<script>
+    var btn = document.querySelectorAll('button')
+    // var time = new Date()
+    // console.log(time.getHours());
+    // console.log(time.getMinutes());
+    // console.log(time.getSeconds());
+    // console.log(time);
+    setInterval(() => {
+        // console.log(1);
+        // btn[0].innerHTML = time.getHours()
+        // btn[1].innerHTML = time.getMinutes()
+        // btn[2].innerHTML = time.getSeconds()
+        btn[2].innerHTML++
+        if (btn[2].innerHTML == 61) {
+            btn[1].innerHTML++
+            btn[2].innerHTML = 1
+        } else if (btn[1].innerHTML == 61) {
+            btn[0].innerHTML++
+        }
+    }, 1000);
+</script>

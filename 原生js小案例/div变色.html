@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+       margin: 0 0 10px 600px;
+    }
+    div{
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    div p{
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: #000;
+        margin: 0 10px;
+    }
+</style>
+<body> 
+    <button>点击将div变成红色</button>
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</body>
+</html>
+<script>
+    var p=document.querySelectorAll('p')
+    var btn=document.querySelector('button')
+    window.alert('未定义')
+    btn.onclick=function(){
+        for(var i=0;i<p.length;i++){
+            p[i].style.background="red"
+        }
+    }
+</script>
