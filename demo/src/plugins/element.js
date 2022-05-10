@@ -1,0 +1,91 @@
+import Vue from 'vue'
+import {
+    Button,
+    Form,
+    FormItem,
+    Input,
+    Container,
+    Header,
+    Aside,
+    Main,
+    Row,
+    Col,
+    RadioGroup,
+    Menu,
+    RadioButton,
+    Submenu,
+    MenuItemGroup,
+    MenuItem,
+    Breadcrumb,
+    BreadcrumbItem,
+    Card,
+    Table,
+    TableColumn,
+    Switch,
+    Pagination,
+    Dialog,
+    MessageBox,
+    Message,
+    Select,
+    Option,
+    Tree,
+    Tag,
+    Alert,
+    Steps,
+    Step,
+    Tabs,
+    TabPane,
+    Cascader,
+    CheckboxGroup,
+    Checkbox,
+    Upload,
+    Timeline,
+    TimelineItem
+
+}
+    from
+    'element-ui'
+
+Vue.use(TimelineItem)
+Vue.use(Timeline)
+Vue.use(Upload)
+Vue.use(CheckboxGroup)
+Vue.use(Checkbox)
+Vue.use(Cascader)
+Vue.use(TabPane)
+Vue.use(Tabs)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(Alert)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Option)
+Vue.use(Select)
+Vue.use(Dialog)
+Vue.use(Pagination)
+Vue.use(Switch)
+Vue.use(Card)
+Vue.use(TableColumn)
+Vue.use(Table)
+Vue.use(BreadcrumbItem)
+Vue.use(Breadcrumb)
+Vue.use(MenuItemGroup)
+Vue.use(MenuItem)
+Vue.use(RadioButton)
+Vue.use(Submenu)
+Vue.use(RadioGroup)
+Vue.use(Menu)
+Vue.use(Col)
+Vue.use(Row)
+Vue.use(Container)
+Vue.use(Header)
+Vue.use(Aside)
+Vue.use(Main)
+Vue.use(Button)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+
+
+Vue.prototype.$confirm = MessageBox.confirm;
+Vue.prototype.$message = Message;
